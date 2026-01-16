@@ -1,0 +1,119 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-color: #0a0f1a;
+    color: #e4e9f7;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5em;
+}
+
+/* Slider Container */
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Slider Track */
+.slider {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Slide Images */
+.slider img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    box-shadow: 0 0 10px rgba(110, 148, 255, 0.2);
+}
+.slider img:hover {
+    transform: scale(1.03);
+}
+
+/* Fancy Box (mb-10) */
+.mb-10 {
+    margin: 40px auto;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #1a1f38, #2a3060);
+    color: #ffffff;
+    border-radius: 12px;
+    border: 1.5px solid #6e94ff33;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(110, 148, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mb-10:hover {
+    background: linear-gradient(135deg, #2b345f, #3d45a0);
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(110, 148, 255, 0.5);
+}
+
+/* Modal Fix */
+#audioConfirmationModal {
+    z-index: 1000 !important;
+    position: fixed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mb-10 {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    .slider-container {
+        margin: 20px auto;
+    }
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at 20% 30%, rgba(110, 148, 255, 0.1), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 80, 255, 0.08), transparent 50%);
+    z-index: -1;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a1f38);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #e4e9f7;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Animation Keyframes */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
